@@ -1,0 +1,49 @@
+table td, table td * {
+    vertical-align: top;
+}
+
+h1 {
+	text-align: center;
+    margin-top: 0;
+	margin-bottom: 0; 
+}
+
+h2 {
+	border-top: 1px solid #cccccc;
+    margin-top: 25px;
+	margin-bottom: 0;
+}
+
+h3 {
+    margin-top: 0;
+	margin-bottom: 0;
+}
+
+#global {
+	padding: 10px 0;
+	border-collapse: separate;
+	border-spacing: 15px 0;
+
+}
+
+.userlist {
+	padding: 10px 0;
+	border-collapse: separate;
+	border-spacing: 20px 0;
+}
+
+table.userlist th {
+	text-align: center; 
+}
+
+table.userlist td {
+	min-width: 100px;
+}
+
+table.userlist tr:nth-child(even) {
+    background-color: #F0FFFF;
+}
+
+body {
+	background-color: #ffffff;
+}
