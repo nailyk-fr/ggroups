@@ -26,7 +26,7 @@
 
 		<p>		
 		    <!--Add buttons to initiate auth sequence and sign out-->
-		    <button id="authorize-button" style="display: none;">Authorize</button>
+		    <button id="authorize-button" style="display: none;">Login</button>
 		    <button id="signout-button" style="display: none;">Sign Out</button>
 		</p>
 		<h3> L'api <?php if(!$isAdmin) { echo("<font color='red'>admin</font>"); }?>  est: <div id="status">pas prete</div></h3>
@@ -35,15 +35,15 @@
 	
 	<?php
 	//if(!$isAdmin) {
-		echo('<h2> indiv </h2>');
+		echo('<h2> Gestion individuelle </h2>');
 		echo('<input type="text" id="email" name="email" value="">');
+		echo('<button id="check">check</button>'); 
 		echo('<button id="add">add</button>');
 		echo('<button id="delete">delete</button>');
-		echo('<button id="check">check</button>'); 
 	//}
 	?>
 
-		<h2> groupe </h2>
+		<h2> Gestion par lots </h2>
 		<button id="checkgr">check</button>
 		<button id="members">members</button>
 		<button id="update">update + (ajout)</button>
@@ -56,12 +56,26 @@
 	//}
 	?>
 
-		<h2> resultats </h2>
+		<h2> Resultats </h2>
 		<button onclick="document.getElementById('debug').innerHTML = ''; document.getElementById('content').innerHTML = ''; ">clear</button>
 		<h3> content/pre </h3>
 	    <pre id="content"></pre>
 		<h3> debug </h3>
-		<pre id="debug">debug</pre>
+		<pre id="debug">CA MARCHE PAS!
+
+1. Verifier que la connection à été établie une fois que l'API était 'radis'. 
+   Si c'est OK le bouton en haut à gauche affiche 'Sign Out'
+2. Vérifier que la connexion avec ggl fonctionne en cliquant sur
+   'gestion par lots', 'members'. Cela va retourner la liste des emails
+   actuellement dans le groupe
+3. A droite doit se trouver un tableau contenant les enseignants, depuis aurion. 
+   30j pour le FLE, 90j pour le DLE. 
+4. Si tout ceci est correct, cliquer sur update+ ou update- pour mettre à jour
+   le groupe depuis la liste aurion, selon les besoin. 
+5. Vérifier qu'il n'y a pas d'erreur en bas, sous 'debug'.
+
+Astuce: Le bouton 'Clear' (dans 'Resultats') permet d'effacer les anciens messages, dont celui-ci. 
+</pre>
 
 		<br/>
 
